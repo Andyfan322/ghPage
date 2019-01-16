@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>SqlSessionFactoryBuilder · GitBook</title>
+        <title>二、Spring · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../SqlSession/" />
+    <link rel="next" href="核心组件/" />
     
     
-    <link rel="prev" href="../Mybatis/" />
+    <link rel="prev" href="../String/" />
     
 
     </head>
@@ -148,9 +148,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../Spring/">
+        <li class="chapter active" data-level="1.2.2" data-path="./">
             
-                <a href="../Spring/">
+                <a href="./">
             
                     
                     二、Spring
@@ -162,9 +162,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="../Spring/核心组件/">
+        <li class="chapter " data-level="1.2.2.1" data-path="核心组件/">
             
-                <a href="../Spring/核心组件/">
+                <a href="核心组件/">
             
                     
                     核心组件
@@ -175,9 +175,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.2" data-path="../Spring/加载流程/">
+        <li class="chapter " data-level="1.2.2.2" data-path="加载流程/">
             
-                <a href="../Spring/加载流程/">
+                <a href="加载流程/">
             
                     
                     加载流程
@@ -207,9 +207,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.3.1" data-path="./">
+        <li class="chapter " data-level="1.2.3.1" data-path="../SqlSessionFactory/">
             
-                <a href="./">
+                <a href="../SqlSessionFactory/">
             
                     
                     SqlSessionFactoryBuilder
@@ -666,7 +666,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >SqlSessionFactoryBuilder</a>
+        <a href="../.." >二、Spring</a>
     </h1>
 </div>
 
@@ -681,80 +681,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="sqlsessionfactorybuilder">SqlSessionFactoryBuilder</h1>
+                                <h1 id="spring">Spring</h1>
 <blockquote>
-<p>&#x8FD9;&#x4E2A;&#x7C7B;&#x662F;&#x7528;&#x6765;&#x6784;&#x5EFA;SqlSessionFactory&#x5DE5;&#x5382;&#x7528;&#x7684;&#xFF0C;&#x7528;&#x5B8C;&#x5373;&#x56DE;&#x6536;&#x3002;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF1A;&#x5C40;&#x90E8;&#x65B9;&#x6CD5;&#x5185;&#x3002;</p>
-</blockquote>
-<h3 id="&#x7C7B;&#x65B9;&#x6CD5;">&#x7C7B;&#x65B9;&#x6CD5;</h3>
-<p><img src="http://47.95.12.0:3389/ftp/SqlSessionFactoryBuilder.png" alt=""> </p>
-<h3 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h3>
-<blockquote>
-<p>&#x524D;8&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x4ECE;XMl&#x91CC;&#x9762;&#x6784;&#x5EFA;SqlSessionFactory&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;&#x4ECE;Configuration&#x5BF9;&#x8C61;&#x6765;&#x6784;&#x5EFA;SqlSessionFactory&#x3002;</p>
+<p>Spring &#x76F8;&#x4FE1;&#x5927;&#x5BB6;&#x5426;&#x4E0D;&#x964C;&#x751F;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x5728;&#x65E5;&#x5E38;&#x7684;&#x5F00;&#x53D1;&#x4E2D;&#x65E0;&#x5904;&#x4E0D;&#x5728;&#xFF0C;&#x81EA;&#x4ECE;2003&#x5E74;&#x7531;<a href="https://baike.baidu.com/item/Rod%20Johnson/1423612?fr=aladdin" target="_blank">Rod Johnson</a>&#x521B;&#x5EFA;&#x4EE5;&#x6765;&#x5728;Java&#x754C;&#x6380;&#x8D77;&#x201C;&#x6625;&#x5929;&#x5927;&#x6F6E;&#x201D;&#xFF0C;&#x6781;&#x5927;&#x7684;&#x89E3;&#x653E;&#x4E86;&#x5E7F;&#x5927;&#x7A0B;&#x5E8F;&#x5458;&#x3002;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x884D;&#x751F;&#x51FA;Spring&#x5F88;&#x591A;&#x6846;&#x67B6;&#xFF0C;&#x50CF;SpringBoot&#xFF0C;Spring JPA&#xFF0C;SpingMVC&#x7B49;&#x7B49;&#x3002;&#x6240;&#x6709;&#x7684;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x57FA;&#x4E8E;Spring Framework &#x5F3A;&#x5927;&#x7684;&#x57FA;&#x77F3;&#x3002;</p>
 </blockquote>
 <ul>
-<li>&#x4F7F;&#x7528;XML&#x65B9;&#x5F0F;&#x6784;&#x5EFA;    mybatis-config.xml    </li>
+<li>&#x9AD8;&#x5C4B;&#x5EFA;&#x74F4;</li>
 </ul>
-<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>  
-<span class="hljs-meta">&lt;!DOCTYPE configuration PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;  
-&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span>  
-
-<span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>   
-    <span class="hljs-comment">&lt;!-- &#x52A0;&#x8F7D;&#x7C7B;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x5C5E;&#x6027;&#x6587;&#x4EF6; --&gt;</span>  
-    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">&quot;db.properties&quot;</span>/&gt;</span>  
-    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x7C7B;&#x578B;&#x522B;&#x540D; --&gt;</span>  
-    <span class="hljs-tag">&lt;<span class="hljs-name">typeAliases</span>&gt;</span>  
-        <span class="hljs-tag">&lt;<span class="hljs-name">typeAlias</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;cn.itcast.javaee.mybatis.app04.Student&quot;</span> <span class="hljs-attr">alias</span>=<span class="hljs-string">&quot;student&quot;</span>/&gt;</span>  
-    <span class="hljs-tag">&lt;/<span class="hljs-name">typeAliases</span>&gt;</span>  
-    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x8FDE;&#x63A5;&#x73AF;&#x5883;&#x4FE1;&#x606F; --&gt;</span>  
-    <span class="hljs-tag">&lt;<span class="hljs-name">environments</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;mysql_developer&quot;</span>&gt;</span>  
-        <span class="hljs-comment">&lt;!-- &#x8FDE;&#x63A5;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#xFF0C;&#x53D6;&#x4E00;&#x4E2A;&#x4EFB;&#x610F;&#x552F;&#x4E00;&#x7684;&#x540D;&#x5B57; --&gt;</span>  
-        <span class="hljs-tag">&lt;<span class="hljs-name">environment</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mysql_developer&quot;</span>&gt;</span>  
-            <span class="hljs-comment">&lt;!-- mybatis&#x4F7F;&#x7528;jdbc&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x65B9;&#x5F0F; --&gt;</span>  
-            <span class="hljs-tag">&lt;<span class="hljs-name">transactionManager</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;jdbc&quot;</span>/&gt;</span>  
-            <span class="hljs-comment">&lt;!-- mybatis&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;&#x65B9;&#x5F0F;&#x6765;&#x83B7;&#x53D6;&#x8FDE;&#x63A5; --&gt;</span>  
-            <span class="hljs-tag">&lt;<span class="hljs-name">dataSource</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;pooled&quot;</span>&gt;</span>  
-                <span class="hljs-comment">&lt;!-- &#x914D;&#x7F6E;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x4EA4;&#x4E92;&#x7684;4&#x4E2A;&#x5FC5;&#x8981;&#x5C5E;&#x6027; --&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;driver&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${mysql.driver}&quot;</span>/&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${mysql.url}&quot;</span>/&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${mysql.username}&quot;</span>/&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${mysql.password}&quot;</span>/&gt;</span>  
-            <span class="hljs-tag">&lt;/<span class="hljs-name">dataSource</span>&gt;</span>  
-        <span class="hljs-tag">&lt;/<span class="hljs-name">environment</span>&gt;</span>  
-        <span class="hljs-comment">&lt;!-- &#x8FDE;&#x63A5;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#xFF0C;&#x53D6;&#x4E00;&#x4E2A;&#x4EFB;&#x610F;&#x552F;&#x4E00;&#x7684;&#x540D;&#x5B57; --&gt;</span>  
-        <span class="hljs-tag">&lt;<span class="hljs-name">environment</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;oracle_developer&quot;</span>&gt;</span>  
-            <span class="hljs-comment">&lt;!-- mybatis&#x4F7F;&#x7528;jdbc&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x65B9;&#x5F0F; --&gt;</span>  
-            <span class="hljs-tag">&lt;<span class="hljs-name">transactionManager</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;jdbc&quot;</span>/&gt;</span>  
-            <span class="hljs-comment">&lt;!-- mybatis&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;&#x65B9;&#x5F0F;&#x6765;&#x83B7;&#x53D6;&#x8FDE;&#x63A5; --&gt;</span>  
-            <span class="hljs-tag">&lt;<span class="hljs-name">dataSource</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;pooled&quot;</span>&gt;</span>  
-                <span class="hljs-comment">&lt;!-- &#x914D;&#x7F6E;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x4EA4;&#x4E92;&#x7684;4&#x4E2A;&#x5FC5;&#x8981;&#x5C5E;&#x6027; --&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;driver&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${oracle.driver}&quot;</span>/&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${oracle.url}&quot;</span>/&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${oracle.username}&quot;</span>/&gt;</span>  
-                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${oracle.password}&quot;</span>/&gt;</span>  
-            <span class="hljs-tag">&lt;/<span class="hljs-name">dataSource</span>&gt;</span>  
-        <span class="hljs-tag">&lt;/<span class="hljs-name">environment</span>&gt;</span>  
-    <span class="hljs-tag">&lt;/<span class="hljs-name">environments</span>&gt;</span>  
-    <span class="hljs-comment">&lt;!-- &#x52A0;&#x8F7D;&#x6620;&#x5C04;&#x6587;&#x4EF6;--&gt;</span>  
-    <span class="hljs-tag">&lt;<span class="hljs-name">mappers</span>&gt;</span>  
-        <span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">&quot;cn/itcast/javaee/mybatis/app14/StudentMapper.xml&quot;</span>/&gt;</span>  
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mappers</span>&gt;</span>  
-<span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
-</code></pre>
-<pre><code class="lang-java"><span class="hljs-comment">//&#x4F2A;&#x4EE3;&#x7801;&#x83B7;&#x53D6;SqlSessionFactory</span>
-String resource=<span class="hljs-string">&quot;mybatis-config.xml&quot;</span>;
-InputStream is=Resource.getResourceAsStream(source);
-SqlSessionFactory sqlSessionFactory=<span class="hljs-keyword">new</span> SqlSessionFactoryBuilder.build(is);
-</code></pre>
+<p><img src="http://wiki.jikexueyuan.com/project/spring/images/arch1.png" alt=""></p>
 <ul>
-<li>&#x4F7F;&#x7528;Java&#x4EE3;&#x7801;&#x6784;&#x5EFA;</li>
+<li><p>&#x6838;&#x5FC3;&#x5BB9;&#x5668;&#x5C42;</p>
+<ul>
+<li>Core &#x6A21;&#x5757;&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;&#x6846;&#x67B6;&#x7684;&#x57FA;&#x672C;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF0C;&#x5305;&#x62EC; IoC &#x53CA;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x529F;&#x80FD;&#x3002;</li>
+<li><p>Bean &#x6A21;&#x5757;&#xFF1A;&#x5B9E;&#x73B0; Bean &#x7BA1;&#x7406;&#xFF0C;&#x5305;&#x62EC;&#x81EA;&#x52A8;&#x88C5;&#x914D;&#x673A;&#x5236;&#x7B49;&#x529F;&#x80FD;&#xFF1B; &#x5176;&#x4E2D;BeanFactory&#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+</li>
+<li><p>Context &#x6A21;&#x5757;&#xFF1A;&#x5EFA;&#x7ACB;&#x5728; Core &#x548C; Bean &#x6A21;&#x5757;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x53CA;&#x5B9A;&#x4E49;&#x7684;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x3002;ApplicationContext &#x662F;&#x4E0A;&#x4E0B;&#x6587;&#x6A21;&#x5757;&#x7684;&#x91CD;&#x8981;&#x63A5;&#x53E3;&#x3002;</p>
+</li>
+<li><p>SpEL &#x6A21;&#x5757;&#xFF1A;&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x8A00;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;&#x8FD0;&#x884C;&#x65F6;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x53CA;&#x64CD;&#x4F5C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x673A;&#x5236;&#x3002;</p>
+</li>
 </ul>
-<pre><code class="lang-java">DataSource dataSource = BlogDataSourceFactory.getBlogDataSource();
-TransactionFactory transactionFactory = <span class="hljs-keyword">new</span> JdbcTransactionFactory();
-Environment environment = <span class="hljs-keyword">new</span> Environment(<span class="hljs-string">&quot;development&quot;</span>, transactionFactory, dataSource);
-Configuration configuration = <span class="hljs-keyword">new</span> Configuration(environment);
-configuration.addMapper(BlogMapper.class);
-SqlSessionFactory sqlSessionFactory = <span class="hljs-keyword">new</span> SqlSessionFactoryBuilder().build(configuration);
-</code></pre>
+</li>
+<li><p>&#x6570;&#x636E;&#x8BBF;&#x95EE;/&#x96C6;&#x6210;</p>
+<ul>
+<li><p>JDBC &#x6A21;&#x5757;&#xFF1A;&#x7528;&#x4E8E;&#x66FF;&#x4EE3;&#x7E41;&#x7410;&#x7684; JDBC API &#x7684;&#x62BD;&#x8C61;&#x5C42;&#x3002;</p>
+</li>
+<li><p>ORM &#x6A21;&#x5757;&#xFF1A;&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x6620;&#x5C04;&#x62BD;&#x8C61;&#x5C42;&#xFF0C;&#x53EF;&#x96C6;&#x6210;JPA&#xFF0C;JDO&#xFF0C;Hibernate&#xFF0C;iBatis&#x3002;</p>
+</li>
+<li><p>OXM &#x6A21;&#x5757;&#xFF1A;XML&#x6D88;&#x606F;&#x7ED1;&#x5B9A;&#x62BD;&#x8C61;&#x5C42;&#xFF0C;&#x652F;&#x6301;JAXB&#xFF0C;Castor&#xFF0C;XMLBeans&#xFF0C;JiBX&#xFF0C;XStream&#x3002;</p>
+<ul>
+<li>JMS &#x6A21;&#x5757;&#xFF1A;Java&#x6D88;&#x606F;&#x670D;&#x52A1;&#x6A21;&#x5757;&#xFF0C;&#x5B9E;&#x73B0;&#x6D88;&#x606F;&#x751F;&#x4EA7;-&#x6D88;&#x8D39;&#x4E4B;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Transaction &#x6A21;&#x5757;&#xFF1A;&#x4E8B;&#x52A1;&#x6A21;&#x5757;&#x4E3A;&#x5404;&#x79CD; POJO &#x652F;&#x6301;&#x7F16;&#x7A0B;&#x5F0F;&#x548C;&#x58F0;&#x660E;&#x5F0F;&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x3002;</li>
+</ul>
+</li>
+<li><p>Web&#x5E94;&#x7528;</p>
+<ul>
+<li><p>Web &#x6A21;&#x5757;&#xFF1A;Web MVC &#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E; &#x6A21;&#x578B;-&#x89C6;&#x56FE;-&#x63A7;&#x5236;&#x5668; &#x7684;&#x57FA;&#x7840;web&#x5E94;&#x7528;&#x6846;&#x67B6;&#x3002;</p>
+</li>
+<li><p>servlet &#x6A21;&#x5757;&#xFF1A;&#x5B9E;&#x73B0;&#x4E86;&#x7EDF;&#x4E00;&#x7684;&#x76D1;&#x542C;&#x5668;&#x4EE5;&#x53CA;&#x548C;&#x9762;&#x5411;web&#x5E94;&#x7528;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x7528;&#x4EE5;&#x521D;&#x59CB;&#x5316; IoC &#x5BB9;&#x5668;&#x3002;</p>
+</li>
+<li><p>Web-Portlet&#xFF1A;&#x5B9E;&#x73B0;&#x5728; portlet &#x73AF;&#x5883;&#x4E2D;&#x5B9E;&#x73B0; MVC&#x3002;</p>
+</li>
+<li><p>Web-Socket &#x6A21;&#x5757;&#xFF1A;&#x4E3A; WebSocket&#x8FDE;&#x63A5; &#x63D0;&#x4F9B;&#x652F;&#x6301;&#x3002;</p>
+</li>
+</ul>
+</li>
+<li><p>AOP &#x6A21;&#x5757;</p>
+<ul>
+<li>&#x63D0;&#x4F9B;&#x4E86;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x5B9E;&#x73B0;&#xFF0C;&#x5141;&#x8BB8;&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x62E6;&#x622A;&#x5668;&#x53CA;&#x5207;&#x5165;&#x70B9;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x65E0;&#x8026;&#x5408;&#x96C6;&#x6210;&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x6D4B;&#x8BD5;&#xFF1A;&#x652F;&#x6301; JUnit &#x3001;TestNG &#x6846;&#x67B6;&#x7684;&#x96C6;&#x6210;  </p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -782,12 +764,12 @@ SqlSessionFactory sqlSessionFactory = <span class="hljs-keyword">new</span> SqlS
 
             
                 
-                <a href="../Mybatis/" class="navigation navigation-prev " aria-label="Previous page: 三、Mybatis">
+                <a href="../String/" class="navigation navigation-prev " aria-label="Previous page: String">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../SqlSession/" class="navigation navigation-next " aria-label="Next page: SqlSessionFactory">
+                <a href="核心组件/" class="navigation navigation-next " aria-label="Next page: 核心组件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -798,7 +780,7 @@ SqlSessionFactory sqlSessionFactory = <span class="hljs-keyword">new</span> SqlS
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SqlSessionFactoryBuilder","level":"1.2.3.1","depth":3,"next":{"title":"SqlSessionFactory","level":"1.2.3.2","depth":3,"path":"学习/SqlSession/README.md","ref":"学习/SqlSession/README.md","articles":[]},"previous":{"title":"三、Mybatis","level":"1.2.3","depth":2,"path":"学习/Mybatis/README.md","ref":"学习/Mybatis/README.md","articles":[{"title":"SqlSessionFactoryBuilder","level":"1.2.3.1","depth":3,"path":"学习/SqlSessionFactory/README.md","ref":"学习/SqlSessionFactory/README.md","articles":[]},{"title":"SqlSessionFactory","level":"1.2.3.2","depth":3,"path":"学习/SqlSession/README.md","ref":"学习/SqlSession/README.md","articles":[]},{"title":"SqlSession","level":"1.2.3.3","depth":3,"path":"学习/SqlSession/READM.md","ref":"学习/SqlSession/READM.md","articles":[]},{"title":"映射器","level":"1.2.3.4","depth":3,"path":"学习/映射器/README.md","ref":"学习/映射器/README.md","articles":[]},{"title":"四大金刚","level":"1.2.3.5","depth":3,"path":"学习/四大金刚/README.md","ref":"学习/四大金刚/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"学习/SqlSessionFactory/README.md","mtime":"2019-01-09T15:59:54.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T06:01:19.452Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"二、Spring","level":"1.2.2","depth":2,"next":{"title":"核心组件","level":"1.2.2.1","depth":3,"path":"学习/Spring/核心组件/README.md","ref":"学习/Spring/核心组件/README.md","articles":[]},"previous":{"title":"String","level":"1.2.1.1","depth":3,"path":"学习/String/README.md","ref":"学习/String/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"学习/Spring/README.md","mtime":"2018-11-22T13:30:31.869Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T06:00:52.426Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -806,10 +788,6 @@ SqlSessionFactory sqlSessionFactory = <span class="hljs-keyword">new</span> SqlS
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
