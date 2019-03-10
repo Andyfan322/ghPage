@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>八、设计模式 · GitBook</title>
+        <title>四大金刚-ResultHandler · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../命令模式/" />
+    <link rel="next" href="../类型转换/" />
     
     
-    <link rel="prev" href="../Java里的NIO/" />
+    <link rel="prev" href="../四大金刚-ParameterHandler/" />
     
 
     </head>
@@ -298,9 +298,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.8" data-path="../四大金刚-ResultHandler/">
+        <li class="chapter active" data-level="1.2.3.8" data-path="./">
             
-                <a href="../四大金刚-ResultHandler/">
+                <a href="./">
             
                     
                     四大金刚-ResultHandler
@@ -638,9 +638,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.8" data-path="./">
+        <li class="chapter " data-level="1.2.8" data-path="../设计模式/">
             
-                <a href="./">
+                <a href="../设计模式/">
             
                     
                     八、设计模式
@@ -828,7 +828,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >八、设计模式</a>
+        <a href="../.." >四大金刚-ResultHandler</a>
     </h1>
 </div>
 
@@ -843,60 +843,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x516B;&#x3001;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x516B;&#x3001;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h1>
-<blockquote>
-<p>&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x4E0D;&#x662F;&#x4EC0;&#x4E48;&#x9AD8;&#x6DF1;&#x7684;&#x62DB;&#x5F0F;&#xFF0C;&#x518D;&#x6211;&#x4EEC;&#x5E73;&#x5E38;&#x7684;&#x7F16;&#x7801;&#x91CC;&#x9762;&#xFF0C;&#x53EA;&#x8981;&#x7A0D;&#x5FAE;&#x7528;&#x5FC3;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x5F0F;&#x6765;&#x5339;&#x914D;&#x4F60;&#x7684;&#x4E1A;&#x52A1;&#x3002;&#x4F46;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x53D8;&#x901A;&#xFF0C;&#x4E0D;&#x80FD;&#x6B7B;&#x642C;&#x786C;&#x5957;&#xFF0C;&#x8FD9;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x611F;&#x89C9;&#xFF0C;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x7684;&#x589E;&#x51CF;&#x8FD9;&#x4E9B;&#x6A21;&#x5F0F;&#x7684;&#x57FA;&#x672C;&#x9AA8;&#x67B6;&#x6765;&#x4F7F;&#x7528;&#x3002;</p>
-</blockquote>
-<h3 id="&#x4E00;&#x3001;23&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x4E00;&#x3001;23&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h3>
-<table>
-<thead>
-<tr>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x5185;&#x5BB9;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&#x884C;&#x4E3A;&#x578B;&#xFF08;11&#x79CD;)</td>
-<td>&#x63CF;&#x8FF0;&#x7C7B;&#x6216;&#x5BF9;&#x8C61;&#x600E;&#x6837;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x548C;&#x804C;&#x8D23;&#x5206;&#x914D;</td>
-<td>&#x7B56;&#x7565;&#xFF0C;&#x89C2;&#x5BDF;&#x8005;&#xFF0C;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x547D;&#x4EE4;&#xFF0C;&#x5907;&#x5FD8;&#x5F55;&#xFF0C;&#x4E2D;&#x4ECB;&#x8005;&#xFF0C;&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x8BBF;&#x95EE;&#x8005;&#xFF0C;&#x8D23;&#x4EFB;&#x94FE;&#xFF0C;&#x72B6;&#x6001;&#xFF0C;&#x6A21;&#x677F;&#x65B9;&#x6CD5;</td>
-</tr>
-<tr>
-<td>&#x521B;&#x5EFA;&#x578B;&#xFF08;5&#x79CD;&#xFF09;</td>
-<td>&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#xFF0C;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;</td>
-<td>&#x5355;&#x4F8B;&#xFF0C;&#x5EFA;&#x9020;&#x8005;&#xFF0C;&#x539F;&#x578B;&#xFF0C;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#xFF0C;&#x62BD;&#x8C61;&#x5DE5;&#x5382;</td>
-</tr>
-<tr>
-<td>&#x7ED3;&#x6784;&#x578B;&#xFF08;7&#x79CD;&#xFF09;</td>
-<td>&#x5904;&#x7406;&#x7C7B;&#x6216;&#x5BF9;&#x8C61;&#x95F4;&#x7684;&#x7EC4;&#x5408;</td>
-<td>&#x9002;&#x914D;&#x5668;&#xFF0C;&#x88C5;&#x9970;&#x8005;&#xFF0C;&#x7ED3;&#x5408;&#xFF0C;&#x6865;&#x63A5;&#xFF0C;&#x5916;&#x89C2;&#xFF0C;&#x4EAB;&#x5143;&#xFF0C;&#x4EE3;&#x7406;</td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x4E8C;&#x3001;&#x89C4;&#x8303;">&#x4E8C;&#x3001;&#x89C4;&#x8303;</h4>
-<h5 id="&#x91CC;&#x6C0F;&#x66FF;&#x6362;">&#x91CC;&#x6C0F;&#x66FF;&#x6362;</h5>
-<blockquote>
-<p>&#x7236;&#x7C7B;&#x51FA;&#x73B0;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5B50;&#x7C7B;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#xFF0C;&#x53CD;&#x4E4B;&#x4E0D;&#x53EF;&#x4EE5;&#x3002;</p>
-</blockquote>
-<ul>
-<li>&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x5B8C;&#x5168;&#x5B9E;&#x73B0;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;</li>
-<li>&#x5B50;&#x7C7B;&#x53EF;&#x4EE5;&#x6709;&#x81EA;&#x5DF1;&#x4E2A;&#x6027;&#x7684;&#x5C5E;&#x6027;/&#x65B9;&#x6CD5;</li>
-<li>&#x8986;&#x76D6;&#x5B9E;&#x73B0;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x65F6;&#x5019;&#xFF0C;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x88AB;&#x653E;&#x5927;</li>
-<li>&#x8986;&#x76D6;&#x5B9E;&#x73B0;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x65F6;&#x5019;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x88AB;&#x7F29;&#x5C0F;</li>
-</ul>
-<h5 id="&#x4F9D;&#x8D56;&#x5012;&#x8F6C;">&#x4F9D;&#x8D56;&#x5012;&#x8F6C;</h5>
-<blockquote>
-<p>&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;&#x9762;&#x5411;&#x63A5;&#x53E3;&#x7F16;&#x7A0B;&#xFF0C;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x3001;&#x62BD;&#x8C61;&#x7C7B;&#x4EA7;&#x751F;&#x3002;</p>
-</blockquote>
-<h5 id="&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;">&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;</h5>
-<blockquote>
-<p>&#x5EFA;&#x7ACB;&#x5355;&#x4E00;&#x63A5;&#x53E3;&#xFF0C;&#x5C3D;&#x91CF;&#x7EC6;&#x5316;&#xFF0C;&#x65B9;&#x6CD5;&#x5C3D;&#x91CF;&#x5C11;&#x3002;</p>
-</blockquote>
-<h5 id="&#x5F00;&#x95ED;&#x539F;&#x5219;">&#x5F00;&#x95ED;&#x539F;&#x5219;</h5>
-<blockquote>
-<p>&#x5BF9;&#x6269;&#x5C55;&#x5F00;&#x653E;&#xFF0C;&#x5BF9;&#x4FEE;&#x6539;&#x5173;&#x95ED;&#x3002; </p>
-</blockquote>
+                                <h1 id="&#x56DB;&#x5927;&#x91D1;&#x521A;-resulthandler">&#x56DB;&#x5927;&#x91D1;&#x521A;-ResultHandler</h1>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ResultHandler</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">handleResult</span><span class="hljs-params">(ResultContext&lt;? extends T&gt; resultContext)</span></span>;
+
+}
+
+<span class="hljs-comment">// &#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DefaultResultHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ResultHandler</span>&lt;<span class="hljs-title">Object</span>&gt; </span>{
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> List&lt;Object&gt; list;
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DefaultResultHandler</span><span class="hljs-params">()</span> </span>{
+    list = <span class="hljs-keyword">new</span> ArrayList&lt;Object&gt;();
+  }
+
+  <span class="hljs-meta">@SuppressWarnings</span>(<span class="hljs-string">&quot;unchecked&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DefaultResultHandler</span><span class="hljs-params">(ObjectFactory objectFactory)</span> </span>{
+    list = objectFactory.create(List.class);<span class="hljs-comment">//&#x6838;&#x5FC3;</span>
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleResult</span><span class="hljs-params">(ResultContext&lt;? extends Object&gt; context)</span> </span>{
+    list.add(context.getResultObject());
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Object&gt; <span class="hljs-title">getResultList</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> list;
+  }
+
+}
+
+<span class="hljs-comment">// &#x6838;&#x5FC3;&#x65B9;&#x6CD5;&#x7247;&#x6BB5;</span>
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-keyword">public</span> &lt;T&gt; <span class="hljs-function">T <span class="hljs-title">create</span><span class="hljs-params">(Class&lt;T&gt; type, List&lt;Class&lt;?&gt;&gt; constructorArgTypes, List&lt;Object&gt; constructorArgs)</span> </span>{
+    Class&lt;?&gt; classToCreate = resolveInterface(type);
+    <span class="hljs-comment">// we know types are assignable</span>
+    <span class="hljs-keyword">return</span> (T) instantiateClass(classToCreate, constructorArgTypes, constructorArgs);
+  }
+  <span class="hljs-comment">//&#x5B9E;&#x8D28;&#x65B9;&#x6CD5;&#xFF0C;&#x5229;&#x7528;&#x53CD;&#x5C04;&#x751F;&#x6210;&#x5BF9;&#x8C61;</span>
+  &lt;T&gt; <span class="hljs-function">T <span class="hljs-title">instantiateClass</span><span class="hljs-params">(Class&lt;T&gt; type, List&lt;Class&lt;?&gt;&gt; constructorArgTypes, List&lt;Object&gt; constructorArgs)</span> </span>{
+    <span class="hljs-keyword">try</span> {
+      Constructor&lt;T&gt; constructor;
+      <span class="hljs-keyword">if</span> (constructorArgTypes == <span class="hljs-keyword">null</span> || constructorArgs == <span class="hljs-keyword">null</span>) {
+        constructor = type.getDeclaredConstructor();
+        <span class="hljs-keyword">if</span> (!constructor.isAccessible()) {
+          constructor.setAccessible(<span class="hljs-keyword">true</span>);
+        }
+        <span class="hljs-keyword">return</span> constructor.newInstance();
+      }
+      constructor = type.getDeclaredConstructor(constructorArgTypes.toArray(<span class="hljs-keyword">new</span> Class[constructorArgTypes.size()]));
+      <span class="hljs-keyword">if</span> (!constructor.isAccessible()) {
+        constructor.setAccessible(<span class="hljs-keyword">true</span>);
+      }
+      <span class="hljs-keyword">return</span> constructor.newInstance(constructorArgs.toArray(<span class="hljs-keyword">new</span> Object[constructorArgs.size()]));
+    } <span class="hljs-keyword">catch</span> (Exception e) {
+      StringBuilder argTypes = <span class="hljs-keyword">new</span> StringBuilder();
+      <span class="hljs-keyword">if</span> (constructorArgTypes != <span class="hljs-keyword">null</span> &amp;&amp; !constructorArgTypes.isEmpty()) {
+        <span class="hljs-keyword">for</span> (Class&lt;?&gt; argType : constructorArgTypes) {
+          argTypes.append(argType.getSimpleName());
+          argTypes.append(<span class="hljs-string">&quot;,&quot;</span>);
+        }
+        argTypes.deleteCharAt(argTypes.length() - <span class="hljs-number">1</span>); <span class="hljs-comment">// remove trailing ,</span>
+      }
+      StringBuilder argValues = <span class="hljs-keyword">new</span> StringBuilder();
+      <span class="hljs-keyword">if</span> (constructorArgs != <span class="hljs-keyword">null</span> &amp;&amp; !constructorArgs.isEmpty()) {
+        <span class="hljs-keyword">for</span> (Object argValue : constructorArgs) {
+          argValues.append(String.valueOf(argValue));
+          argValues.append(<span class="hljs-string">&quot;,&quot;</span>);
+        }
+        argValues.deleteCharAt(argValues.length() - <span class="hljs-number">1</span>); <span class="hljs-comment">// remove trailing ,</span>
+      }
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ReflectionException(<span class="hljs-string">&quot;Error instantiating &quot;</span> + type + <span class="hljs-string">&quot; with invalid types (&quot;</span> + argTypes + <span class="hljs-string">&quot;) or values (&quot;</span> + argValues + <span class="hljs-string">&quot;). Cause: &quot;</span> + e, e);
+    }
+  }
+</code></pre>
 
                                 
                                 </section>
@@ -924,12 +946,12 @@
 
             
                 
-                <a href="../Java里的NIO/" class="navigation navigation-prev " aria-label="Previous page: Java里的NIO">
+                <a href="../四大金刚-ParameterHandler/" class="navigation navigation-prev " aria-label="Previous page: 四大金刚-ParameterHandler">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../命令模式/" class="navigation navigation-next " aria-label="Next page: 命令模式">
+                <a href="../类型转换/" class="navigation navigation-next " aria-label="Next page: 类型转换">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -940,7 +962,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"八、设计模式","level":"1.2.8","depth":2,"next":{"title":"命令模式","level":"1.2.8.1","depth":3,"path":"学习/命令模式/README.md","ref":"学习/命令模式/README.md","articles":[]},"previous":{"title":"Java里的NIO","level":"1.2.7.2","depth":3,"path":"学习/Java里的NIO/README.md","ref":"学习/Java里的NIO/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"学习/设计模式/README.md","mtime":"2019-03-10T06:15:48.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-10T16:27:02.589Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"四大金刚-ResultHandler","level":"1.2.3.8","depth":3,"next":{"title":"类型转换","level":"1.2.3.9","depth":3,"path":"学习/类型转换/README.md","ref":"学习/类型转换/README.md","articles":[]},"previous":{"title":"四大金刚-ParameterHandler","level":"1.2.3.7","depth":3,"path":"学习/四大金刚-ParameterHandler/README.md","ref":"学习/四大金刚-ParameterHandler/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"学习/四大金刚-ResultHandler/README.md","mtime":"2019-03-10T16:11:08.322Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-10T16:27:02.589Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
